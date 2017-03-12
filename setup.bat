@@ -1,0 +1,4 @@
+
+
+
+mklink /H ..\.vimrc .vimrc
