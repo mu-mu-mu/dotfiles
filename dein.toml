@@ -1,0 +1,41 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+hook_add = ''' " {{{
+    let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_smart_case = 1
+    let g:neocomplete#sources#syntax#min_keyword_length = 3
+    inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    augroup OmniCompletionNeocompleteCommands
+        autocmd!
+        autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+        autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    augroup END
+''' # }}}
+
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = ['unite.vim']
+hook_add = ''' " {{{
+    let g:vimfiler_force_overwrite_statusline = 0
+    let g:vimfiler_as_default_explorer = 1
+    noremap <silent> [unite]ff :<C-u>VimFilerBufferDir<CR>
+''' # }}}
+
+
+#Colors
+
+[[plugins]] # solarized
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]] # hybrid
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]] #jellybeans
+repo = 'https://github.com/nanotech/jellybeans.vim'
