@@ -7,3 +7,4 @@
     camd = commit --amend -a 
 [user]
 	email = mumumu0722@gmail.com
+  user = mumumu
