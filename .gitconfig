@@ -1,9 +1,10 @@
 [alias]
-    st = status
-    cm = commit
-    br = branch
-    co = checkout
-    cmam = commit -a -m 
-    camd = commit --amend -a 
+  st = status
+  cm = commit
+  br = branch
+  co = checkout
+  cmam = commit -a -m 
+  camd = commit --amend -a 
 [user]
-	email = mumumu0722@gmail.com
+ 	email = mumumu0722@gmail.com
+  name = mumumu

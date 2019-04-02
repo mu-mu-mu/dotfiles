@@ -1,9 +1,9 @@
 #! /bin/bash
 
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-mkdir ~/.vim/rc
-ln -Fs ~/dotfiles/dein.toml ~/.vim/rc/dein.toml
-ln -Fs ~/dotfiles/dein_lazy.toml ~/.vim/rc/dein_lazy.toml
-ln -Fs ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -Fs ~/dotfiles/.zshrc ~/.zshrc
-ln -Fs ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s -f ~/dotfiles/.vimrc ~/.vimrc
+mkdir -p  ~/.vim/rc
+ln -s -f  ~/dotfiles/dein.toml ~/.vim/rc/dein.toml
+ln -s -f  ~/dotfiles/dein_lazy.toml ~/.vim/rc/dein_lazy.toml
+ln -s -f  ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s -f  ~/dotfiles/.zshrc ~/.zshrc
+ln -s -f  ~/dotfiles/.gitconfig ~/.gitconfig
