@@ -52,11 +52,11 @@ alias tempspace=tmpspace
 
 
 
-#exec tmux
-[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-[[ -s /home/mumumu/.tmuxinator/scripts/tmuxinator ]] && source /home/mumumu/.tmuxinator/scripts/tmuxinator
-
-
+#exec tmux if in my computer
+if [ `hostname` = "mumumu" ]; then
+  [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+  [[ -s /home/mumumu/.tmuxinator/scripts/tmuxinator ]] && source /home/mumumu/.tmuxinator/scripts/tmuxinator
+fi
 
 
 # The next line updates PATH for the Google Cloud SDK.
