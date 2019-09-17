@@ -39,3 +39,9 @@ repo = 'w0ng/vim-hybrid'
 
 [[plugins]] #jellybeans
 repo = 'https://github.com/nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'

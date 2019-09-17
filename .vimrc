@@ -122,23 +122,23 @@ let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 set showtabline=2 " 常にタブラインを表示
 
 " The prefix key.
-nnoremap    [Tag]   <Nop>
-nmap    t [Tag]
-" Tab jump
-for n in range(1, 9)
-  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
-endfor
-
-" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
-
-map <silent> [Tag]c :tablast <bar> tabnew<CR>
-" tc 新しいタブを一番右に作る
-map <silent> [Tag]x :tabclose<CR>
-" tx タブを閉じる
-map <silent> [Tag]n :tabnext<CR>
-" tn 次のタブ
-map <silent> [Tag]p :tabprevious<CR>
-" tp 前のタブ
+"nnoremap    [Tag]   <Nop>
+"nmap    t [Tag]
+"" Tab jump
+"for n in range(1, 9)
+"  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+"endfor
+"
+"" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+"
+"map <silent> [Tag]c :tablast <bar> tabnew<CR>
+"" tc 新しいタブを一番右に作る
+"map <silent> [Tag]x :tabclose<CR>
+"" tx タブを閉じる
+"map <silent> [Tag]n :tabnext<CR>
+"" tn 次のタブ
+"map <silent> [Tag]p :tabprevious<CR>
+"" tp 前のタブ
 
 
 "TAB
@@ -150,5 +150,9 @@ set smarttab
 
 "ctags rules
 nnoremap <f5> :!ctags -R<CR>
+
+nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 syntax enable
