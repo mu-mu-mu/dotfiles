@@ -5,6 +5,7 @@
   co = checkout
   cmam = commit -a -m 
   camd = commit --amend -a 
+  rh = reset --hard
 [user]
  	email = mumumu0722@gmail.com
   name = mumumu
