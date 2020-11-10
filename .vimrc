@@ -9,11 +9,6 @@ nnoremap <F3> :noh<CR>
 set ignorecase
 set smartcase
 
-"Ferquentry Use Commands
-nnoremap q b
-nnoremap b q
-
-
 
 set smartindent
 
@@ -37,6 +32,7 @@ vnoremap * "zy:let @/ = @z<CR>n
     
 set clipboard=unnamedplus
 
+set nrformats=
 
 filetype plugin indent off
 
@@ -151,8 +147,13 @@ set smarttab
 "ctags rules
 nnoremap <f5> :!ctags -R<CR>
 
+"
+inoremap <f15> <Nop>
+inoremap <f16> <Nop>
+
 "NERDTree
 nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 syntax enable

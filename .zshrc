@@ -3,6 +3,7 @@
 #export PATH="/usr/local/musl/bin:/opt/VirtualBox:/opt/ctftools:$PATH"
 export PATH="/usr/local/musl/bin:/opt/ctftools:$PATH"
 
+eval `opam config env`
 
 autoload -Uz colors
 colors
@@ -30,7 +31,7 @@ $'
 alias ..='cd ../'
 alias ....='cd ../..'
 alias ls='ls -F --color=auto'
-alias clip='xsel --clipboard --input'
+alias clip='xclip -selection c'
 
 # 一時作業用コマンド http://bit.ly/22GF66y
 tmpspace() {
@@ -53,10 +54,10 @@ alias tempspace=tmpspace
 
 
 #exec tmux if in my computer
-if [ `hostname` = "mumumu" ]; then
-  [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-  [[ -s /home/mumumu/.tmuxinator/scripts/tmuxinator ]] && source /home/mumumu/.tmuxinator/scripts/tmuxinator
-fi
+#if [ `hostname` = "mumumu" ]; then
+#  [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+#  [[ -s /home/mumumu/.tmuxinator/scripts/tmuxinator ]] && source /home/mumumu/.tmuxinator/scripts/tmuxinator
+#fi
 
 
 # The next line updates PATH for the Google Cloud SDK.
