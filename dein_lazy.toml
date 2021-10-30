@@ -1,11 +1,9 @@
 
 [[plugins]]
-# TOMLのシンタックスハイライト
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 [[plugins]]
-# Markdownのシンタックスハイライト
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
 hook_source = ''' " {{{
@@ -14,7 +12,6 @@ hook_source = ''' " {{{
 ''' # }}}
 
 [[plugins]]
-# Markdownのプレビュー
 repo = 'kannokanno/previm'
 depends = ['open-browser.vim']
 on_ft = ['markdown']

@@ -1,14 +1,11 @@
-
-#environment variables
-#export PATH="/usr/local/musl/bin:/opt/VirtualBox:/opt/ctftools:$PATH"
-export PATH="/usr/local/musl/bin:/opt/ctftools:$PATH"
-
+export PATH="$HOME/bin:$PATH"
 eval `opam config env`
 
 autoload -Uz colors
 colors
 
 setopt no_beep
+setopt noflowcontrol
 
 autoload -Uz vcs_info
 setopt prompt_subst
@@ -23,15 +20,11 @@ precmd () { vcs_info }
 PROMPT='[%D %T][%F{cyan}%n%f@%F{green}%U%m%u%f:%F{blue}%B%d%f%b] ${vcs_info_msg_0_}
 $'
 
-
-#keyboard input (like vi)
-#bindkey -v
-
-#commands
 alias ..='cd ../'
 alias ....='cd ../..'
 alias ls='ls -F --color=auto'
 alias clip='xclip -selection c'
+alias grep='grep --color=auto'
 
 # 一時作業用コマンド http://bit.ly/22GF66y
 tmpspace() {
@@ -49,16 +42,6 @@ tmpspace() {
 }
 
 alias tempspace=tmpspace
-
-
-
-
-#exec tmux if in my computer
-#if [ `hostname` = "mumumu" ]; then
-#  [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-#  [[ -s /home/mumumu/.tmuxinator/scripts/tmuxinator ]] && source /home/mumumu/.tmuxinator/scripts/tmuxinator
-#fi
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/mumumu/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mumumu/google-cloud-sdk/path.zsh.inc'; fi
