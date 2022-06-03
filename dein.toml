@@ -2,21 +2,35 @@
 repo = 'shougo/dein.vim'
 
 [[plugins]]
-repo = 'shougo/neocomplete.vim'
-hook_add = ''' " {{{
-    let g:neocomplete#enable_at_startup = 1
-    let g:neocomplete#enable_smart_case = 1
-    let g:neocomplete#sources#syntax#min_keyword_length = 3
-    inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-    augroup omnicompletionneocompletecommands
-        autocmd!
-        autocmd filetype css setlocal omnifunc=csscomplete#completecss
-        autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#completetags
-        autocmd filetype javascript setlocal omnifunc=javascriptcomplete#completejs
-        autocmd filetype xml setlocal omnifunc=xmlcomplete#completetags
-    augroup end
-''' # }}}
-# autocmd filetype python setlocal omnifunc=pythoncomplete#complete
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+   let g:deoplete#enable_at_startup = 1
+   let g:deoplete#enable_ignore_case = 1
+   let g:deoplete#enable_smart_case = 1
+'''
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+# [[plugins]]
+# repo = 'shougo/neocomplete.vim'
+# hook_add = ''' " {{{
+#     let g:neocomplete#enable_at_startup = 1
+#     let g:neocomplete#enable_smart_case = 1
+#     let g:neocomplete#sources#syntax#min_keyword_length = 3
+#     inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+#     augroup omnicompletionneocompletecommands
+#         autocmd!
+#         autocmd filetype css setlocal omnifunc=csscomplete#completecss
+#         autocmd filetype html,markdown setlocal omnifunc=htmlcomplete#completetags
+#         autocmd filetype javascript setlocal omnifunc=javascriptcomplete#completejs
+#         autocmd filetype xml setlocal omnifunc=xmlcomplete#completetags
+#     augroup end
+# ''' # }}}
+# # autocmd filetype python setlocal omnifunc=pythoncomplete#complete
 
 [[plugins]]
 repo = 'Shougo/vimfiler.vim'
