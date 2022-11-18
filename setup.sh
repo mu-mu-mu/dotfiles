@@ -1,5 +1,6 @@
 #! /bin/bash
 
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 ln -s -f ~/dotfiles/.vimrc ~/.vimrc
 mkdir -p  ~/.vim/rc
 ln -s -f  ~/dotfiles/dein.toml ~/.vim/rc/dein.toml

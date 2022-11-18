@@ -1,3 +1,21 @@
+source ~/.zplug/init.zsh
+
+bindkey -v
+KEYTIMEOUT=1
+
+zplug "zsh-users/zsh-history-substring-search"
+zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
+zplug "modules/history", from:prezto
+zplug "modules/directory", from:prezto
+
+zplug "softmoth/zsh-vim-mode"
+MODE_CURSOR_VIINS="#00ff00 blinking bar"
+MODE_CURSOR_REPLACE="$MODE_CURSOR_VIINS #ff0000"
+MODE_CURSOR_VICMD="green block"
+MODE_CURSOR_SEARCH="#ff00ff steady underline"
+MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
+MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
+
 export PATH="$HOME/bin:$PATH"
 eval `opam config env`
 
@@ -48,3 +66,6 @@ if [ -f '/home/mumumu/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mumumu/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/mumumu/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mumumu/google-cloud-sdk/completion.zsh.inc'; fi
+
+if ! zplug check --verbose; then zplug install;fi
+zplug load
