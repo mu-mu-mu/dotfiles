@@ -63,8 +63,8 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
 
-[[plugins]]
-repo = 'christoomey/vim-tmux-navigator'
+#[[plugins]]
+#repo = 'christoomey/vim-tmux-navigator'
 
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'

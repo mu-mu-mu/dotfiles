@@ -1,30 +1,21 @@
 [alias]
-st = status
-cm = commit
-br = branch
-co = checkout
-cmam = commit -a -m
-camd = commit --amend -a
-rh = reset --hard
-mail = send-email --annotate --cover-letter
+	st = status
+	cm = commit
+	br = branch
+	co = checkout
+	cmam = commit -a -m
+	camd = commit --amend -a
+	rh = reset --hard
 
 [user]
-email = mumumu0722@gmail.com
-name = Keisuke Nishimura
+	email = keisuke.nishimura@inria.fr
+	name = Keisuke Nishimura
 
 [core]
-editor = vim
+	editor = vim
 
-[sendemail]
-smtpencryption = tls
-smtpserver = smtp.gmail.com
-smtpuser = mumumu0722@gmail.com
-smtpserverport = 587
-from = Keisuke Nishimura <mumumu0722@gmail.com>
+[pull]
+	ff = only
 
-[imap]
-folder = "[Gmail]/Drafts"
-host = imaps://imap.gmail.com
-user = mumumu0722@gmail.com
-port = 993
-sslverify = false
+[include]
+	path = .gitconfig.local
