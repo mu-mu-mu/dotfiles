@@ -154,6 +154,7 @@ set completeopt=menuone
 
 set cursorline
 
+let g:vim_json_conceal=0
 
 " https://cscope.sourceforge.net/cscope_maps.vim
 if has("cscope")

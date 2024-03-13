@@ -16,7 +16,7 @@ MODE_CURSOR_SEARCH="#ff00ff steady underline"
 MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin/:$PATH"
 eval `opam config env`
 
 autoload -Uz colors
