@@ -3,13 +3,6 @@
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
-[[plugins]]
-repo = 'rcmdnk/vim-markdown'
-on_ft = ['markdown']
-hook_source = ''' " {{{
-    " é©ìÆÇ≈ê‹ÇËÇΩÇΩÇ‹Ç»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
-    let g:vim_markdown_folding_disabled = 1
-''' # }}}
 
 [[plugins]]
 repo = 'kannokanno/previm'

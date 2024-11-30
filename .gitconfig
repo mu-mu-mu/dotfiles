@@ -19,3 +19,7 @@
 
 [include]
 	path = .gitconfig.local
+[credential]
+	helper = store
+[init]
+	defaultBranch = main

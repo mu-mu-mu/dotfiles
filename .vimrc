@@ -293,5 +293,7 @@ if has("cscope")
 
   endif
 
+autocmd BufRead,BufNewFile *.md setlocal syntax=off
+
 set clipboard=unnamedplus
 syntax enable

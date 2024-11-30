@@ -1,5 +1,5 @@
 #! /bin/bash
-
+set -eux
 
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 ln -s -f ~/dotfiles/.vimrc ~/.vimrc

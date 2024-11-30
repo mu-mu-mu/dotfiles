@@ -4,7 +4,7 @@ bindkey -v
 KEYTIMEOUT=1
 
 zplug "zsh-users/zsh-history-substring-search"
-zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
+zplug "Jxck/dotfiles", as:command, use:"bin/color"
 zplug "modules/history", from:prezto
 zplug "modules/directory", from:prezto
 
@@ -17,6 +17,9 @@ MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
 export PATH="$HOME/bin:$HOME/.local/bin/:$PATH"
+export PATH="$HOME/src/cmake/bin:$PATH"
+export PATH="$HOME/src/SVF/Release-build/bin/:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 eval `opam config env`
 
 autoload -Uz colors
@@ -69,3 +72,5 @@ if [ -f '/home/mumumu/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mumu
 
 if ! zplug check --verbose; then zplug install;fi
 zplug load
+
+source ~/projects/coccinelle/env.sh > /dev/null
