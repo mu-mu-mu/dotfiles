@@ -1,0 +1,23 @@
+IMAPAccount gmail
+Host imap.gmail.com
+User mumumu0722.ml@gmail.com
+PassCmd "pass mlgmail/mbsync"
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/.mail/Gmail/
+Inbox ~/.mail/Gmail/INBOX
+Subfolders Verbatim
+
+Channel gmail-ml
+Master :gmail-remote:
+Slave :gmail-local:
+Patterns "coccinelle" "linux/sched" "linux/bpf"
+Create Both
+Expunge Both
+SyncState *
