@@ -296,4 +296,9 @@ if has("cscope")
 autocmd BufRead,BufNewFile *.md setlocal syntax=off
 
 set clipboard=unnamedplus
+
+autocmd BufEnter *.tex set conceallevel=1
+autocmd BufEnter *.tex set concealcursor=n
+let g:tex_conceal = ''
+
 syntax enable

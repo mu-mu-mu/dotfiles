@@ -1,8 +1,17 @@
 
 [[plugins]]
+<<<<<<< Updated upstream
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
+=======
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['markdown']
+hook_source = ''' " {{{
+    " Ž©“®‚ÅÜ‚è‚½‚½‚Ü‚È‚¢‚æ‚¤‚É‚·‚é
+    let g:vim_markdown_folding_disabled = 1
+''' # }}}
+>>>>>>> Stashed changes
 
 [[plugins]]
 repo = 'kannokanno/previm'

@@ -6,6 +6,7 @@
 	cmam = commit -a -m
 	camd = commit --amend -a
 	rh = reset --hard
+	latexdiff = difftool -t latexdiff
 
 [user]
 	email = keisuke.nishimura@inria.fr
@@ -20,6 +21,6 @@
 [include]
 	path = .gitconfig.local
 [credential]
-	helper = store
-[init]
-	defaultBranch = main
+	helper = store --file ~/.git-credentials
+[difftool "latexdiff"]
+	cmd = git-latexdiff-helper \"$LOCAL\" \"$REMOTE\"
