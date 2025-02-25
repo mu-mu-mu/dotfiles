@@ -1,0 +1,86 @@
+set realname = "Keisuke Nishimura"
+set from = ""
+
+set editor = "vim"
+
+set pager_stop=yes
+
+set folder="~/.mail/Gmail/"
+set spoolfile = "=linux/sched"
+
+
+mailboxes "=linux/sched" "=coccinelle" "=linux/bpf"
+
+
+set use_from = yes
+set sendmail = "/bin/true"
+
+set trash="+Trash"
+
+unset smtp_url
+
+
+set sidebar_visible # comment to disable sidebar by default
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_format = "%B %* [%?N?%N / ?%S]"
+set mail_check_stats
+
+set sort=date-received
+set sort_aux=reverse-date-received
+set sort=threads
+set sort_browser=reverse-date
+set collapse_all=yes
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set imap_idle
+
+set timeout = 300
+set mail_check = 300
+
+bind index <space> collapse-thread
+
+macro index,pager \Ck '<sidebar-prev><sidebar-open>' "Move to previous sidebar folder and open it"
+macro index,pager \Cj '<sidebar-next><sidebar-open>' "Move to next sidebar folder and open it"
+bind index,pager \CE sidebar-toggle-visible
+
+# https://www.ryanlue.com/posts/2017-05-21-mutt-the-vim-way
+
+#bind index,pager         d         noop
+bind index,pager         s         noop
+#bind index,pager         c         noop
+bind generic,pager       t         noop
+
+bind generic,index,pager         a         noop
+
+bind generic             z         noop
+bind index,pager,attach  g         noop
+bind pager		 j		  noop
+bind pager		 k		  noop
+bind pager		 h		  noop
+
+bind pager		 j		  next-line
+bind pager		 k		  previous-line
+bind pager       h        previous-entry
+bind pager       l        next-entry
+
+unbind pager <Esc>
+bind pager <Esc> exit
+
+bind generic,index       gg        first-entry
+bind generic,index       G         last-entry
+bind pager               gg        top
+bind pager               G         bottom
+bind generic,index,pager \Cd       half-down
+bind generic,index,pager \Cu       half-up
+bind generic             zt        current-top
+bind generic             zz        current-middle
+bind generic             zb        current-bottom
+bind index,pager         N         search-opposite
+bind index               <Backtab> previous-new-then-unread
+
+bind generic,index,pager \Cf       next-page
+bind generic,index,pager \Cb       previous-page

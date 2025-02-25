@@ -14,3 +14,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s -f  ~/dotfiles/.zshrc ~/.zshrc
 touch ~/.gitconfig.local
 ln -s -f  ~/dotfiles/.gitconfig ~/.gitconfig
+
+ln -s -f  ~/dotfiles/.neomuttrc ~/.neomuttrc

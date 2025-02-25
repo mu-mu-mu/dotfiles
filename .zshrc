@@ -16,15 +16,11 @@ MODE_CURSOR_SEARCH="#ff00ff steady underline"
 MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
-<<<<<<< Updated upstream
 export PATH="$HOME/bin:$HOME/.local/bin/:$PATH"
 export PATH="$HOME/src/cmake/bin:$PATH"
 export PATH="$HOME/src/SVF/Release-build/bin/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-=======
 export PATH="$HOME/src/FlameGraph:$HOME/src/verifast-21.04/bin:$HOME/bin:$PATH"
-export PATH="$HOME/src/SVF/Release-build/bin/:$HOME/bin:$PATH"
->>>>>>> Stashed changes
 eval `opam config env`
 
 autoload -Uz colors
@@ -78,10 +74,5 @@ if [ -f '/home/mumumu/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mumu
 if ! zplug check --verbose; then zplug install;fi
 zplug load
 
-<<<<<<< Updated upstream
 source ~/projects/coccinelle/env.sh > /dev/null
-=======
-source ~/src/coccinelle/env.sh > /dev/null
-
 setopt no_share_history
->>>>>>> Stashed changes
