@@ -17,11 +17,6 @@ MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
 MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
 export PATH="$HOME/bin:$HOME/.local/bin/:$PATH"
-export PATH="$HOME/src/cmake/bin:$PATH"
-export PATH="$HOME/src/SVF/Release-build/bin/:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/src/FlameGraph:$HOME/src/verifast-21.04/bin:$HOME/bin:$PATH"
-eval `opam config env`
 
 autoload -Uz colors
 colors
@@ -65,14 +60,11 @@ tmpspace() {
 
 alias tempspace=tmpspace
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/mumumu/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mumumu/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/mumumu/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mumumu/google-cloud-sdk/completion.zsh.inc'; fi
+if [[ -f "$HOME/.zshrc.local" ]]; then
+    source "$HOME/.zshrc.local"
+fi
 
 if ! zplug check --verbose; then zplug install;fi
 zplug load
 
-source ~/projects/coccinelle/env.sh > /dev/null
 setopt no_share_history

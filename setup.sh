@@ -1,6 +1,11 @@
 #! /bin/bash
 set -eux
 
+touch ~/.zshrc.local
+
+mkdir -p ~/bin
+mkdir -p ~/.local/bin
+
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 ln -s -f ~/dotfiles/.vimrc ~/.vimrc
 mkdir -p  ~/.vim/rc
