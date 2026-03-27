@@ -22,3 +22,5 @@ ln -s -f  ~/dotfiles/.gitconfig ~/.gitconfig
 
 ln -s -f  ~/dotfiles/.neomuttrc ~/.neomuttrc
 ln -s -f  ~/dotfiles/.mbsyncrc ~/.mbsyncrc
+
+ln -s -f  ~/dotfiles/nvim ~/.config/nvim
