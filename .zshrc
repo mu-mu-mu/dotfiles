@@ -66,5 +66,3 @@ fi
 
 if ! zplug check --verbose; then zplug install;fi
 zplug load
-
-setopt no_share_history
