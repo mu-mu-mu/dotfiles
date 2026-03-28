@@ -24,3 +24,5 @@ ln -s -f  ~/dotfiles/.neomuttrc ~/.neomuttrc
 ln -s -f  ~/dotfiles/.mbsyncrc ~/.mbsyncrc
 
 ln -s -f  ~/dotfiles/nvim ~/.config/nvim
+
+ln -s -f ~/dotfiles/.wezterm.lua ~/.wezterm.lua
