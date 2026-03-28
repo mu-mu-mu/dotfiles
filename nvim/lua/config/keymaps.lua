@@ -14,7 +14,6 @@ keymap("n", "<Left>", "<cmd>tabprevious<CR>", { silent = true })
 keymap("n", "<Up>", "<cmd>bprevious<CR>", { silent = true })
 keymap("n", "<Down>", "<cmd>bnext<CR>", { silent = true })
 
-keymap("n", "<F5>", "<cmd>!ctags -R<CR>")
 
 keymap("i", "<F15>", "<Nop>", { silent = true })
 keymap("i", "<F16>", "<Nop>", { silent = true })
