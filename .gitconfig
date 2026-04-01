@@ -24,3 +24,5 @@
 	helper = store --file ~/.git-credentials
 [difftool "latexdiff"]
 	cmd = git-latexdiff-helper \"$LOCAL\" \"$REMOTE\"
+[init]
+	defaultBranch = main

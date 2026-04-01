@@ -67,6 +67,10 @@ bind pager		 k		  previous-line
 bind pager       h        previous-entry
 bind pager       l        next-entry
 
+set strict_threads = yes
+#bind pager <down> next-subthread
+#bind pager <up>   previous-subthread
+
 unbind pager <Esc>
 bind pager <Esc> exit
 
