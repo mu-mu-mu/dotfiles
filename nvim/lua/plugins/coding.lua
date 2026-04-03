@@ -30,8 +30,11 @@ return {
         preset = "default",
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
         ["<CR>"] = { "accept", "fallback" },
-        ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
-        ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+        -- ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+        -- ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+			  
+		["<C-n>"] = { "select_next" },
+		["<C-p>"] = { "select_prev" },
       },
       appearance = {
         use_nvim_cmp_as_default = false,
@@ -53,11 +56,18 @@ return {
     "github/copilot.vim",
     init = function()
       vim.g.copilot_no_tab_map = true
-      vim.keymap.set("i", "<C-l>", 'copilot#Accept("\\<CR>")', {
-        expr = true,
-        replace_keycodes = false,
-        silent = true,
-      })
+      -- vim.keymap.set("i", "<C-l>", 'copilot#Accept("\\<CR>")', {
+      --   expr = true,
+      --   replace_keycodes = false,
+      --   silent = true,
+      -- })
+	  vim.keymap.set("i", "<Tab>", function()
+	  if vim.fn.pumvisible() == 1 then
+		return "<C-n>"  -- 補完選択
+	  else
+		return vim.fn["copilot#Accept"]("<CR>")
+	  end
+	end, { expr = true, replace_keycodes = false })
     end,
   },
 }
