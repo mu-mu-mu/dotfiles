@@ -61,13 +61,12 @@ return {
       --   replace_keycodes = false,
       --   silent = true,
       -- })
-	  vim.keymap.set("i", "<Tab>", function()
-	  if vim.fn.pumvisible() == 1 then
-		return "<C-n>"  -- 補完選択
-	  else
-		return vim.fn["copilot#Accept"]("<CR>")
-	  end
-	end, { expr = true, replace_keycodes = false })
+      vim.keymap.set(
+        "i",
+        "<Tab>",
+        'pumvisible() ? "\\<C-n>" : copilot#Accept("\\<Tab>")',
+        { expr = true, replace_keycodes = false }
+      )
     end,
   },
 }
