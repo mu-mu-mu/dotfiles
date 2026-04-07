@@ -18,4 +18,7 @@ keymap("n", "<Down>", "<cmd>bnext<CR>", { silent = true })
 keymap("i", "<F15>", "<Nop>", { silent = true })
 keymap("i", "<F16>", "<Nop>", { silent = true })
 
+keymap("n", "tt", "<cmd>tabedit<CR>", { desc = "New tab" })
+keymap("n", "tT", "<cmd>tab split<CR>")
+
 keymap("v", "*", [["zy:let @/ = @z<CR>n]])

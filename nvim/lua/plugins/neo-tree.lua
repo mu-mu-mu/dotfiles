@@ -16,6 +16,13 @@ return {
         follow_current_file = {
           enabled = true,
         },
+		window = {
+		  fuzzy_finder_mappings = {
+			["<C-t>"] = function(state)
+			  require("neo-tree.sources.filesystem.commands").open_tabnew(state)
+			end,
+		  },
+		},
       },
       window = {
         width = 30,
