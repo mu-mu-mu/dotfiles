@@ -7,6 +7,7 @@ return {
 
         vim.keymap.set('n', ']c', gs.next_hunk, { buffer = bufnr })
         vim.keymap.set('n', '[c', gs.prev_hunk, { buffer = bufnr })
+		vim.keymap.set('n', '<leader>hp', require('gitsigns').preview_hunk)
       end,
     })
   end,
