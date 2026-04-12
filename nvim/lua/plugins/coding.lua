@@ -51,6 +51,42 @@ return {
     },
   },
 
+  -- formatting
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_fallback = true })
+        end,
+        mode = { "n", "v" },
+        desc = "Format buffer/range",
+      },
+    },
+    opts = {
+      formatters_by_ft = {
+        rust = { "rustfmt" },
+      },
+      formatters = {
+        rustfmt = {
+          args = { "--edition", "2021", "--config", "unstable_features=true" },
+        },
+      },
+    },
+    config = function(_, opts)
+      local conform = require("conform")
+      conform.setup(opts)
+
+      vim.keymap.set({ "n", "v" }, "gq", function()
+        conform.format({ async = true, lsp_fallback = true })
+      end, { desc = "Format with rustfmt" })
+    end,
+  },
+
+
   -- GitHub Copilot (official)
   {
     "github/copilot.vim",
