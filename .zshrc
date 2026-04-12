@@ -18,6 +18,9 @@ MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
 
 export PATH="$HOME/bin:$HOME/.local/bin/:$PATH"
 
+export EDITOR=nvim
+export VISUAL=$EDITOR
+
 autoload -Uz colors
 colors
 
