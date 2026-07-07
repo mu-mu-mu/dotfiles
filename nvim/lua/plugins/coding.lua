@@ -103,6 +103,10 @@ return {
         'pumvisible() ? "\\<C-n>" : copilot#Accept("\\<Tab>")',
         { expr = true, replace_keycodes = false }
       )
+	  vim.keymap.set("i", "<C-l>", "<Plug>(copilot-accept-word)")
+	  vim.keymap.set("i", "<C-j>", "<Plug>(copilot-accept-line)")
+	  vim.keymap.set("i", "<M-]>", "<Plug>(copilot-next)")
+	  vim.keymap.set("i", "<M-[>", "<Plug>(copilot-previous)")
     end,
   },
 }
