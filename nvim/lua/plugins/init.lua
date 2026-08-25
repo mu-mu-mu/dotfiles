@@ -3,4 +3,5 @@ return {
   { import = "plugins.neo-tree" },
   { import = "plugins.lualine" },
   { import = "plugins.indent" },
+  { import = "plugins.coq" },
 }
