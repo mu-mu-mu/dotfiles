@@ -73,3 +73,13 @@ zplug load
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Automatically include opam environment
+autoload -U add-zsh-hook
+
+function opam_auto_env() {
+  eval "$(opam env --shell=zsh 2>/dev/null)"
+}
+
+add-zsh-hook chpwd opam_auto_env
+opam_auto_env
