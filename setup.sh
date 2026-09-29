@@ -1,6 +1,8 @@
 #! /bin/bash
 set -eux
 
+script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
 touch ~/.zshrc.local
 
 mkdir -p ~/bin
@@ -26,3 +28,10 @@ ln -s -f  ~/dotfiles/.mbsyncrc ~/.mbsyncrc
 ln -s -f  ~/dotfiles/nvim ~/.config/nvim
 
 ln -s -f ~/dotfiles/.wezterm.lua ~/.wezterm.lua
+
+"${script_dir}/install.sh" keyd
+
+if [ ! -e /etc/keyd/default.conf ]; then
+  sudo install -D -m 0644 "${script_dir}/keyd/default.conf" /etc/keyd/default.conf
+  sudo keyd reload
+fi
