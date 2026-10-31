@@ -4,6 +4,8 @@ local keymap = vim.keymap.set
 
 keymap("", "<M-j>", "<Nop>", { silent = true })
 keymap("", "<M-k>", "<Nop>", { silent = true })
+keymap("i", "<M-j>", "<Nop>", { silent = true })
+keymap("i", "<M-k>", "<Nop>", { silent = true })
 
 keymap("n", "<C-h>", "<C-w>h", { silent = true })
 keymap("n", "<C-j>", "<C-w>j", { silent = true })
