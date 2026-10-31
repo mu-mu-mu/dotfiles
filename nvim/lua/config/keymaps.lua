@@ -2,6 +2,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap.set
 
+keymap("", "<M-j>", "<Nop>", { silent = true })
+keymap("", "<M-k>", "<Nop>", { silent = true })
+
 keymap("n", "<C-h>", "<C-w>h", { silent = true })
 keymap("n", "<C-j>", "<C-w>j", { silent = true })
 keymap("n", "<C-k>", "<C-w>k", { silent = true })
